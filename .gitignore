@@ -1,0 +1,16 @@
+# Ignore backup files and temporary files
+*.bak
+*~
+*.tmp
+
+# Ignore KiCad auto-generated files
+fp-info-cache
+sodar-backups/
+
+# Ignore the .kicad_prl file if it is auto-generated
+*.kicad_prl
+
+# If you generated any other export files (like Gerbers, PDFs, etc.) you may add them here
+# *.gbr
+# *.drl
+# build/
