@@ -11,6 +11,9 @@ sodar-backups/
 *.kicad_prl
 
 # If you generated any other export files (like Gerbers, PDFs, etc.) you may add them here
-# *.gbr
-# *.drl
-# build/
+*.gbr
+*.drl
+build/
+
+PCB/#auto_saved_files#/
+PCB/*.lck
