@@ -6,7 +6,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "U"
+		(property "Reference" "D"
 			(at -4.572 -1.016 0)
 			(effects
 				(font
@@ -49,20 +49,18 @@
 				(hide yes)
 			)
 		)
-		(symbol "QBLP680-RGB1_0_1"
+		(symbol "QBLP680-RGB1_1_1"
 			(rectangle
 				(start -3.81 -2.54)
 				(end 3.81 -10.16)
 				(stroke
 					(width 0)
-					(type default)
+					(type solid)
 				)
 				(fill
-					(type none)
+					(type background)
 				)
 			)
-		)
-		(symbol "QBLP680-RGB1_1_1"
 			(pin passive line
 				(at -6.35 -3.81 0)
 				(length 2.54)
@@ -221,20 +219,18 @@
 				(hide yes)
 			)
 		)
-		(symbol "TC78H621FNG_0_1"
+		(symbol "TC78H621FNG_1_1"
 			(rectangle
 				(start -7.62 -1.27)
 				(end 7.62 -21.59)
 				(stroke
 					(width 0)
-					(type default)
+					(type solid)
 				)
 				(fill
-					(type none)
+					(type background)
 				)
 			)
-		)
-		(symbol "TC78H621FNG_1_1"
 			(pin no_connect line
 				(at -10.16 -2.54 0)
 				(length 2.54)
