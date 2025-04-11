@@ -1074,10 +1074,22 @@
 		(uuid "04a38339-cfd2-48ea-be52-c7183be65977")
 	)
 	(junction
+		(at 58.42 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "186d1447-2578-46f1-9bed-7dbd24415370")
+	)
+	(junction
 		(at 58.42 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3a66d4ae-7e58-48b4-960f-238ce635e55c")
+	)
+	(junction
+		(at 58.42 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bd08ca80-a441-4c4f-ba57-8812b889ea33")
 	)
 	(wire
 		(pts
@@ -1091,6 +1103,36 @@
 	)
 	(wire
 		(pts
+			(xy 31.75 95.25) (xy 33.02 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d322143-5e2f-40e2-a345-88cd4e7a8e7e")
+	)
+	(wire
+		(pts
+			(xy 31.75 92.71) (xy 33.02 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "117e9eaa-8ccb-4735-bbf2-6eb5ab58028e")
+	)
+	(wire
+		(pts
+			(xy 53.34 80.01) (xy 60.96 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15603b9d-450e-42e2-bfb2-e69072ad2629")
+	)
+	(wire
+		(pts
 			(xy 31.75 50.8) (xy 33.02 50.8)
 		)
 		(stroke
@@ -1101,6 +1143,16 @@
 	)
 	(wire
 		(pts
+			(xy 53.34 77.47) (xy 58.42 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1db1b6e7-f3fa-4bf0-96cb-ba8ad435bafe")
+	)
+	(wire
+		(pts
 			(xy 53.34 58.42) (xy 60.96 58.42)
 		)
 		(stroke
@@ -1108,6 +1160,26 @@
 			(type default)
 		)
 		(uuid "1f7fbb7a-44f8-45f7-bc7b-85dc759041fd")
+	)
+	(wire
+		(pts
+			(xy 53.34 82.55) (xy 58.42 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20ded3aa-25a2-4a38-8ef9-4d053f4ebe2e")
+	)
+	(wire
+		(pts
+			(xy 60.96 85.09) (xy 60.96 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2edafcdb-3d22-4803-953f-96dd59a859e0")
 	)
 	(wire
 		(pts
@@ -1141,6 +1213,26 @@
 	)
 	(wire
 		(pts
+			(xy 58.42 90.17) (xy 58.42 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43a201f5-225c-407a-b1c8-ef48d02ebca6")
+	)
+	(wire
+		(pts
+			(xy 31.75 82.55) (xy 33.02 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47d29511-e937-4f86-aa82-9212371b8c82")
+	)
+	(wire
+		(pts
 			(xy 58.42 55.88) (xy 58.42 60.96)
 		)
 		(stroke
@@ -1148,6 +1240,16 @@
 			(type default)
 		)
 		(uuid "49d9e6a8-1abf-4e15-84e9-7930db1333d2")
+	)
+	(wire
+		(pts
+			(xy 53.34 92.71) (xy 60.96 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49f4733d-35f4-42df-b7fc-9fff3f544305")
 	)
 	(wire
 		(pts
@@ -1191,6 +1293,16 @@
 	)
 	(wire
 		(pts
+			(xy 58.42 77.47) (xy 58.42 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fdca73a-8a46-4c1f-b2a2-28dacabc813e")
+	)
+	(wire
+		(pts
 			(xy 53.34 60.96) (xy 53.34 64.77)
 		)
 		(stroke
@@ -1198,6 +1310,26 @@
 			(type default)
 		)
 		(uuid "70fdc1a8-c85d-4d32-b123-dc380ffee006")
+	)
+	(wire
+		(pts
+			(xy 53.34 85.09) (xy 60.96 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "747115f7-a3c7-462f-869d-9683c8239a3b")
+	)
+	(wire
+		(pts
+			(xy 21.59 86.36) (xy 21.59 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74fb54c8-6dc1-4006-9219-3b166c0b9324")
 	)
 	(wire
 		(pts
@@ -1271,6 +1403,66 @@
 	)
 	(wire
 		(pts
+			(xy 31.75 90.17) (xy 33.02 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b51d59fb-f1eb-43a1-83af-14c467ab533d")
+	)
+	(wire
+		(pts
+			(xy 58.42 82.55) (xy 58.42 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c03045b3-a951-4732-922a-fa79aa65382d")
+	)
+	(wire
+		(pts
+			(xy 60.96 87.63) (xy 60.96 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c96673b7-014a-4317-b99a-55b5a8c71dca")
+	)
+	(wire
+		(pts
+			(xy 53.34 90.17) (xy 58.42 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc76b386-bd48-4a56-a13b-396e96148aeb")
+	)
+	(wire
+		(pts
+			(xy 53.34 95.25) (xy 53.34 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2de6a5c-5bce-4b77-a2c8-465925570c21")
+	)
+	(wire
+		(pts
+			(xy 31.75 85.09) (xy 33.02 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d688f26a-3217-4093-a03a-658f191dfd73")
+	)
+	(wire
+		(pts
 			(xy 53.34 55.88) (xy 58.42 55.88)
 		)
 		(stroke
@@ -1278,6 +1470,92 @@
 			(type default)
 		)
 		(uuid "e22eb639-ed5a-4aa7-838c-117206186f71")
+	)
+	(wire
+		(pts
+			(xy 21.59 87.63) (xy 33.02 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2801b43-290f-4ef6-958a-b51e39fe943d")
+	)
+	(wire
+		(pts
+			(xy 53.34 87.63) (xy 60.96 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc365cfe-2933-4fad-91ac-1bd48d17e0a1")
+	)
+	(global_label "EN"
+		(shape input)
+		(at 31.75 85.09 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "31bad89c-1e62-4df6-b5fa-b8c226a5b161")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 26.2853 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "STBY"
+		(shape input)
+		(at 31.75 90.17 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "53ec695c-d52e-4325-b081-9e65002ed4e8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 24.2291 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "EN"
+		(shape input)
+		(at 31.75 95.25 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5eebf09b-920f-4ac9-943c-acb286db03a2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 26.2853 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
 	(global_label "S2"
 		(shape input)
@@ -1314,6 +1592,28 @@
 		(uuid "899684d8-4a82-4fa3-b155-35b5dd2cc2df")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 26.2853 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "S3"
+		(shape input)
+		(at 31.75 82.55 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bdcb979c-2b68-40a7-afac-e945254d3e64")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 26.3458 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1389,6 +1689,204 @@
 			)
 		)
 	)
+	(global_label "S4"
+		(shape input)
+		(at 31.75 92.71 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d20bb2dc-1d71-477b-89ac-eddc735a1777")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 26.3458 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 58.42 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "12428f6f-49f8-43ad-b3de-dfc08e3ac192")
+		(property "Reference" "#PWR06"
+			(at 58.42 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 58.42 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 58.42 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 58.42 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 58.42 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fd9628a2-6592-417d-b087-513f62b8d59d")
+		)
+		(instances
+			(project "sodar"
+				(path "/f620949f-55f1-4ffa-a6f4-2a6276be8919"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "symbols:TC78H621FNG")
+		(at 43.18 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1936356d-db4b-4448-865c-fb5f33e433dd")
+		(property "Reference" "U3"
+			(at 43.18 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TC78H621FNG"
+			(at 43.18 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
+			(at 46.99 98.044 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 43.18 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "8"
+			(uuid "2c46ff24-6154-419a-ad33-3a838d081749")
+		)
+		(pin "13"
+			(uuid "6f6e6bb6-c305-4d2b-8621-9eccc9232643")
+		)
+		(pin "3"
+			(uuid "14c10f17-7424-42b0-b71c-2d79acc5e1f7")
+		)
+		(pin "4"
+			(uuid "eb1a0653-6928-4f18-84dc-f36ba7b37732")
+		)
+		(pin "5"
+			(uuid "7734eccc-acaf-4b2b-a44e-76146e849cc4")
+		)
+		(pin "1"
+			(uuid "0f3f4daf-d5d8-4325-b0e6-ca1f89164850")
+		)
+		(pin "16"
+			(uuid "b723ba26-cf50-4ccd-aeee-559dc59f8b0b")
+		)
+		(pin "2"
+			(uuid "d960431a-23ca-40b3-ae11-aad4f7ef81cb")
+		)
+		(pin "15"
+			(uuid "fa934816-3c4e-441b-adb1-0818c94d86eb")
+		)
+		(pin "14"
+			(uuid "1027a52a-bf58-4bac-8dfc-10e795c09af2")
+		)
+		(pin "7"
+			(uuid "45a353a6-7816-4e99-bfcd-dfff12545926")
+		)
+		(pin "12"
+			(uuid "58dcd06d-0400-43c7-bb93-b937e13ff7cd")
+		)
+		(pin "6"
+			(uuid "12fb6b6d-51e9-490b-b722-5824a7d714cf")
+		)
+		(pin "11"
+			(uuid "f1e6ad54-c290-4d24-b0b0-4626fc8ab74b")
+		)
+		(pin "10"
+			(uuid "d52831a0-cd89-4dd3-9a30-2b7852201113")
+		)
+		(pin "9"
+			(uuid "87b022ee-e448-4d9f-8a47-608c39fe07e6")
+		)
+		(instances
+			(project "sodar"
+				(path "/f620949f-55f1-4ffa-a6f4-2a6276be8919"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(symbol
 		(lib_id "power:Vdrive")
 		(at 53.34 64.77 90)
@@ -1451,6 +1949,146 @@
 			(project ""
 				(path "/f620949f-55f1-4ffa-a6f4-2a6276be8919"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Speaker_Ultrasound")
+		(at 66.04 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "77bca1e5-d15e-4dee-9de9-5453c8fea6c5")
+		(property "Reference" "LS4"
+			(at 71.12 90.1699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Speaker_Ultrasound"
+			(at 71.12 92.7099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "footprints:CUSA-T80-15-2400-TH"
+			(at 65.151 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 65.151 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Ultrasonic transducer"
+			(at 66.04 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5ea9ff78-8a38-4b57-8a40-d54143bf3bed")
+		)
+		(pin "2"
+			(uuid "ed50c381-f6b6-4db2-825e-2077fdeedc69")
+		)
+		(instances
+			(project "sodar"
+				(path "/f620949f-55f1-4ffa-a6f4-2a6276be8919"
+					(reference "LS4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Speaker_Ultrasound")
+		(at 66.04 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a1adfb2e-ac9a-4258-9e84-924730d7ca28")
+		(property "Reference" "LS3"
+			(at 71.12 80.0099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Speaker_Ultrasound"
+			(at 71.12 82.5499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "footprints:CUSA-T80-15-2400-TH"
+			(at 65.151 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 65.151 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Ultrasonic transducer"
+			(at 66.04 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aa393171-cb71-405a-9a12-848a6afc6360")
+		)
+		(pin "2"
+			(uuid "6b66383d-56d4-40e0-b2b5-4c30d285cf40")
+		)
+		(instances
+			(project "sodar"
+				(path "/f620949f-55f1-4ffa-a6f4-2a6276be8919"
+					(reference "LS3")
 					(unit 1)
 				)
 			)
@@ -1589,6 +2227,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:Vdrive")
+		(at 53.34 99.06 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d73b07d8-4270-4018-83d3-0d1e48de9430")
+		(property "Reference" "#PWR05"
+			(at 57.15 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "Vdrive"
+			(at 49.53 99.0599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.34 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"Vdrive\""
+			(at 53.34 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dc17565c-6452-4287-994e-8bdaa92495e6")
+		)
+		(instances
+			(project "sodar"
+				(path "/f620949f-55f1-4ffa-a6f4-2a6276be8919"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "symbols:TC78H621FNG")
 		(at 43.18 40.64 0)
 		(unit 1)
@@ -1693,6 +2398,72 @@
 			(project ""
 				(path "/f620949f-55f1-4ffa-a6f4-2a6276be8919"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 21.59 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e01d87c7-28a6-4ae3-8813-a47ed06d2166")
+		(property "Reference" "#PWR04"
+			(at 21.59 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 21.59 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 21.59 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 21.59 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 21.59 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c6d8b8d8-0a99-40d6-b095-a47fc4fdef20")
+		)
+		(instances
+			(project "sodar"
+				(path "/f620949f-55f1-4ffa-a6f4-2a6276be8919"
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
