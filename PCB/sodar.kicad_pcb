@@ -64,6 +64,7 @@
 			(psnegative no)
 			(psa4output no)
 			(plot_black_and_white yes)
+			(plotinvisibletext no)
 			(sketchpadsonfab no)
 			(plotpadnumbers no)
 			(hidednponfab no)
@@ -185,7 +186,7 @@
 	(footprint "footprints:CAP_EEEFT1V561AP"
 		(layer "F.Cu")
 		(uuid "037fa9e2-23ed-4988-9835-2cd66f641173")
-		(at 168.67 72.33 90)
+		(at 232.1 80.1 90)
 		(property "Reference" "C22"
 			(at -0.375 -6.535 90)
 			(layer "F.SilkS")
@@ -562,7 +563,7 @@
 	(footprint "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 		(layer "F.Cu")
 		(uuid "04ec0f00-f65a-4bac-b6e5-0ba93be9600c")
-		(at 136 53 90)
+		(at 135 53 90)
 		(descr "TSSOP, 16 Pin (https://www.jedec.org/document_search?search_api_views_fulltext=MO-153), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "TSSOP SO JEDEC-MO-153-AB TI-PW0016A Microchip-ST Toshiba-TSSOP16-P-0044-0.65A NXP-SOT403-1 Infineon-P-TSSOP-16-800")
 		(property "Reference" "U4"
@@ -915,7 +916,7 @@
 	(footprint "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 		(layer "F.Cu")
 		(uuid "08bba76f-c0b9-4bde-842c-03c08e2992d4")
-		(at 118 53 90)
+		(at 115 53 90)
 		(descr "TSSOP, 16 Pin (https://www.jedec.org/document_search?search_api_views_fulltext=MO-153), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "TSSOP SO JEDEC-MO-153-AB TI-PW0016A Microchip-ST Toshiba-TSSOP16-P-0044-0.65A NXP-SOT403-1 Infineon-P-TSSOP-16-800")
 		(property "Reference" "U2"
@@ -1268,7 +1269,7 @@
 	(footprint "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 		(layer "F.Cu")
 		(uuid "1107bb7e-56ac-493e-b658-c336348f2640")
-		(at 191 53 90)
+		(at 195 53 90)
 		(descr "TSSOP, 16 Pin (https://www.jedec.org/document_search?search_api_views_fulltext=MO-153), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "TSSOP SO JEDEC-MO-153-AB TI-PW0016A Microchip-ST Toshiba-TSSOP16-P-0044-0.65A NXP-SOT403-1 Infineon-P-TSSOP-16-800")
 		(property "Reference" "U10"
@@ -1820,7 +1821,7 @@
 	(footprint "Resistor_SMD:R_0805_2012Metric"
 		(layer "F.Cu")
 		(uuid "171ca442-2070-4da9-a661-e0ba023290b8")
-		(at 197 59)
+		(at 219 61.85)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R9"
@@ -2019,7 +2020,7 @@
 	(footprint "footprints:QBLP680-RGB1"
 		(layer "F.Cu")
 		(uuid "1938d0e8-68e8-49f3-aa54-e39e87b86ef3")
-		(at 173 80)
+		(at 103.0875 116.25)
 		(property "Reference" "D1"
 			(at 0 0 0)
 			(unlocked yes)
@@ -2394,7 +2395,7 @@
 	(footprint "footprints:CAP_EEEFT1V561AP"
 		(layer "F.Cu")
 		(uuid "2238b4aa-5075-4379-ac84-7734fb61ee5b")
-		(at 180.52 72.33 90)
+		(at 243.95 80.1 90)
 		(property "Reference" "C23"
 			(at -0.375 -6.535 90)
 			(layer "F.SilkS")
@@ -4318,7 +4319,7 @@
 	(footprint "footprints:CAP_EEEFT1V561AP"
 		(layer "F.Cu")
 		(uuid "58395e89-224f-42eb-90ab-ac6d520d100d")
-		(at 192.37 72.33 90)
+		(at 255.8 80.1 90)
 		(property "Reference" "C24"
 			(at -0.375 -6.535 90)
 			(layer "F.SilkS")
@@ -4894,7 +4895,7 @@
 	(footprint "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical"
 		(layer "F.Cu")
 		(uuid "6de4b895-b8fa-488c-ac7e-048e9e8951fb")
-		(at 143 68 90)
+		(at 148.75 68.725 90)
 		(descr "Through hole straight socket strip, 1x02, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
 		(tags "Through hole socket strip THT 1x02 2.54mm single row")
 		(property "Reference" "J3"
@@ -5346,7 +5347,7 @@
 	(footprint "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 		(layer "F.Cu")
 		(uuid "75fd6321-8db3-4cc2-b74f-a153ae3e82dc")
-		(at 109 53 90)
+		(at 105 53 90)
 		(descr "TSSOP, 16 Pin (https://www.jedec.org/document_search?search_api_views_fulltext=MO-153), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "TSSOP SO JEDEC-MO-153-AB TI-PW0016A Microchip-ST Toshiba-TSSOP16-P-0044-0.65A NXP-SOT403-1 Infineon-P-TSSOP-16-800")
 		(property "Reference" "U1"
@@ -6848,7 +6849,7 @@
 	(footprint "Resistor_SMD:R_0805_2012Metric"
 		(layer "F.Cu")
 		(uuid "91d33a7a-0939-427b-a726-cfa4f5a5cbc2")
-		(at 106 65 90)
+		(at 50.5 78.0875 90)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R6"
@@ -7047,7 +7048,7 @@
 	(footprint "Resistor_SMD:R_0805_2012Metric"
 		(layer "F.Cu")
 		(uuid "965b6075-58ab-44da-8035-50d3f1a517f1")
-		(at 111 65 -90)
+		(at 55.5 78.0875 -90)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R7"
@@ -7246,7 +7247,7 @@
 	(footprint "TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x02_P3.50mm_Horizontal"
 		(layer "F.Cu")
 		(uuid "9e3f3923-76ef-4f1c-a327-b9cd71542108")
-		(at 160 86)
+		(at 90.0875 122.25)
 		(descr "Terminal Block 4Ucon ItemNo. 19963, 2 pins, pitch 3.5mm, size 7.7x7mm, drill diameter 1.2mm, pad diameter 2.4mm, http://www.4uconnector.com/online/object/4udrawing/19963.pdf, script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_4Ucon")
 		(tags "THT Terminal Block 4Ucon ItemNo. 19963 pitch 3.5mm size 7.7x7mm drill 1.2mm pad 2.4mm")
 		(property "Reference" "J1"
@@ -7783,7 +7784,7 @@
 	(footprint "footprints:CAP_EEEFT1V561AP"
 		(layer "F.Cu")
 		(uuid "9f0ea50d-fc3e-4927-af0b-38ea954b82c7")
-		(at 156.82 72.33 90)
+		(at 220.25 80.1 90)
 		(property "Reference" "C21"
 			(at -0.375 -6.535 90)
 			(layer "F.SilkS")
@@ -8359,7 +8360,7 @@
 	(footprint "footprints:QBLP680-RGB1"
 		(layer "F.Cu")
 		(uuid "a5882c3a-83d8-42f0-b0b2-74493e9dff75")
-		(at 129 63)
+		(at 73.5 76.0875)
 		(property "Reference" "D3"
 			(at 0 0 0)
 			(unlocked yes)
@@ -8535,7 +8536,7 @@
 	(footprint "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 		(layer "F.Cu")
 		(uuid "a73a9b1a-6d7c-4eb4-a435-893fd4540431")
-		(at 164 53 90)
+		(at 165 53 90)
 		(descr "TSSOP, 16 Pin (https://www.jedec.org/document_search?search_api_views_fulltext=MO-153), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "TSSOP SO JEDEC-MO-153-AB TI-PW0016A Microchip-ST Toshiba-TSSOP16-P-0044-0.65A NXP-SOT403-1 Infineon-P-TSSOP-16-800")
 		(property "Reference" "U7"
@@ -8888,7 +8889,7 @@
 	(footprint "footprints:QBLP680-RGB1"
 		(layer "F.Cu")
 		(uuid "ac36944f-841c-407a-8c0a-3a3257a1f615")
-		(at 195 53 90)
+		(at 217 55.85 90)
 		(property "Reference" "D4"
 			(at 0 0 90)
 			(unlocked yes)
@@ -9263,7 +9264,7 @@
 	(footprint "Resistor_SMD:R_0805_2012Metric"
 		(layer "F.Cu")
 		(uuid "ae1461b5-d36e-44d3-a98e-6d05f3936376")
-		(at 173 87)
+		(at 103.0875 123.25)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R4"
@@ -9462,7 +9463,7 @@
 	(footprint "Resistor_SMD:R_0805_2012Metric"
 		(layer "F.Cu")
 		(uuid "b39b95ef-74d6-419e-82c3-188b4a0bdbfb")
-		(at 173 90)
+		(at 103.0875 126.25)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R5"
@@ -9661,7 +9662,7 @@
 	(footprint "Resistor_SMD:R_0805_2012Metric"
 		(layer "F.Cu")
 		(uuid "bd69beee-986f-4a5b-a080-377a29f04ab0")
-		(at 123 65 90)
+		(at 67.5 78.0875 90)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R8"
@@ -9860,11 +9861,11 @@
 	(footprint "Capacitor_SMD:C_0805_2012Metric"
 		(layer "F.Cu")
 		(uuid "be876ae6-fa00-4f1f-b916-d65cd8e9bb2c")
-		(at 109 59 180)
+		(at 106.5 58.5)
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C1"
-			(at 0 -1.68 0)
+			(at -2.5 0 0)
 			(layer "F.SilkS")
 			(uuid "a10dc79b-558c-433e-9a59-1a9a84ea93b0")
 			(effects
@@ -9915,16 +9916,6 @@
 		(sheetfile "sodar.kicad_sch")
 		(attr smd)
 		(fp_line
-			(start -0.261252 0.735)
-			(end 0.261252 0.735)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "ca22a53d-bb7b-486a-a93f-3e2a59710637")
-		)
-		(fp_line
 			(start -0.261252 -0.735)
 			(end 0.261252 -0.735)
 			(stroke
@@ -9935,34 +9926,14 @@
 			(uuid "5ef5dee2-0da7-4a2e-89a8-8adc4d2d9808")
 		)
 		(fp_line
-			(start 1.7 0.98)
-			(end -1.7 0.98)
+			(start -0.261252 0.735)
+			(end 0.261252 0.735)
 			(stroke
-				(width 0.05)
+				(width 0.12)
 				(type solid)
 			)
-			(layer "F.CrtYd")
-			(uuid "8542ec54-1f3f-4f8d-a44f-14fd977e0abc")
-		)
-		(fp_line
-			(start 1.7 -0.98)
-			(end 1.7 0.98)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "9a7795c6-1622-4423-9a0d-48a35248d836")
-		)
-		(fp_line
-			(start -1.7 0.98)
-			(end -1.7 -0.98)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "ce09fd9d-9be8-4c58-b5a1-2a4ab45dc4e6")
+			(layer "F.SilkS")
+			(uuid "ca22a53d-bb7b-486a-a93f-3e2a59710637")
 		)
 		(fp_line
 			(start -1.7 -0.98)
@@ -9975,24 +9946,44 @@
 			(uuid "9a1fe7bc-38cf-4b94-bc46-ef97f4de81cc")
 		)
 		(fp_line
-			(start 1 0.625)
-			(end -1 0.625)
+			(start -1.7 0.98)
+			(end -1.7 -0.98)
 			(stroke
-				(width 0.1)
+				(width 0.05)
 				(type solid)
 			)
-			(layer "F.Fab")
-			(uuid "8f30ecc2-5abf-45a3-9997-b7e0f06e0050")
+			(layer "F.CrtYd")
+			(uuid "ce09fd9d-9be8-4c58-b5a1-2a4ab45dc4e6")
 		)
 		(fp_line
-			(start 1 -0.625)
-			(end 1 0.625)
+			(start 1.7 -0.98)
+			(end 1.7 0.98)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "9a7795c6-1622-4423-9a0d-48a35248d836")
+		)
+		(fp_line
+			(start 1.7 0.98)
+			(end -1.7 0.98)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "8542ec54-1f3f-4f8d-a44f-14fd977e0abc")
+		)
+		(fp_line
+			(start -1 -0.625)
+			(end 1 -0.625)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "0c039148-1257-4778-b034-082f3d7ff9bc")
+			(uuid "ccb59941-0f2b-470b-9456-2a32424a4cab")
 		)
 		(fp_line
 			(start -1 0.625)
@@ -10005,14 +9996,24 @@
 			(uuid "56fc54e0-be3d-4fe7-9a26-ee33cf88c4c0")
 		)
 		(fp_line
-			(start -1 -0.625)
-			(end 1 -0.625)
+			(start 1 -0.625)
+			(end 1 0.625)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "ccb59941-0f2b-470b-9456-2a32424a4cab")
+			(uuid "0c039148-1257-4778-b034-082f3d7ff9bc")
+		)
+		(fp_line
+			(start 1 0.625)
+			(end -1 0.625)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "8f30ecc2-5abf-45a3-9997-b7e0f06e0050")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 0)
@@ -10026,7 +10027,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.95 0 180)
+			(at -0.95 0)
 			(size 1 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -10035,7 +10036,7 @@
 			(uuid "398dafe0-6a67-4abd-8279-ae549cffaa98")
 		)
 		(pad "2" smd roundrect
-			(at 0.95 0 180)
+			(at 0.95 0)
 			(size 1 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -10059,7 +10060,7 @@
 	(footprint "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 		(layer "F.Cu")
 		(uuid "bf5aaafa-bd25-44cf-b053-a29d9f2611d4")
-		(at 173 53 90)
+		(at 175 53 90)
 		(descr "TSSOP, 16 Pin (https://www.jedec.org/document_search?search_api_views_fulltext=MO-153), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "TSSOP SO JEDEC-MO-153-AB TI-PW0016A Microchip-ST Toshiba-TSSOP16-P-0044-0.65A NXP-SOT403-1 Infineon-P-TSSOP-16-800")
 		(property "Reference" "U8"
@@ -10611,7 +10612,7 @@
 	(footprint "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 		(layer "F.Cu")
 		(uuid "c971ef12-3f45-423c-bcbc-3a0da9ba7877")
-		(at 127 53 90)
+		(at 125 53 90)
 		(descr "TSSOP, 16 Pin (https://www.jedec.org/document_search?search_api_views_fulltext=MO-153), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "TSSOP SO JEDEC-MO-153-AB TI-PW0016A Microchip-ST Toshiba-TSSOP16-P-0044-0.65A NXP-SOT403-1 Infineon-P-TSSOP-16-800")
 		(property "Reference" "U3"
@@ -11163,7 +11164,7 @@
 	(footprint "Connector_PinSocket_2.54mm:PinSocket_2x12_P2.54mm_Vertical"
 		(layer "F.Cu")
 		(uuid "ceca6a15-c0a9-42c7-b453-9ac4fa06b519")
-		(at 108 75 90)
+		(at 80.34 106.46 90)
 		(descr "Through hole straight socket strip, 2x12, 2.54mm pitch, double cols (from Kicad 4.0.7), script generated")
 		(tags "Through hole socket strip THT 2x12 2.54mm double row")
 		(property "Reference" "J2"
@@ -11678,13 +11679,13 @@
 	(footprint "Capacitor_SMD:C_0805_2012Metric"
 		(layer "F.Cu")
 		(uuid "e1e4432e-4c0e-4018-afb5-45bd80a92b06")
-		(at 109 47)
+		(at 109 51.25 90)
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C2"
-			(at 0 -1.68 0)
+			(at 2.5 0 0)
 			(layer "F.SilkS")
-			(uuid "222f8b72-f8a9-4585-a34b-2746757114eb")
+			(uuid "8876c9e7-cb44-4f70-abb1-49578ad4f7d7")
 			(effects
 				(font
 					(size 1 1)
@@ -11693,9 +11694,9 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 0 1.68 0)
+			(at 0 1.68 90)
 			(layer "F.Fab")
-			(uuid "3ff3e5a6-e046-4043-8056-c77c91b65efc")
+			(uuid "facb3930-b47b-4a5b-9ce0-6bb96395cfa6")
 			(effects
 				(font
 					(size 1 1)
@@ -11704,10 +11705,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "cc6ed13b-0d18-4061-81d0-b46fce01548c")
+			(uuid "09a06b2a-0136-4bd6-b17a-e1cf56611471")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11716,10 +11717,10 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "35c2e6f2-148c-47df-9fb7-9ce107bcf76e")
+			(uuid "42517fef-b462-4b25-bcda-63f299c1dc67")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11753,26 +11754,6 @@
 			(uuid "55ce5355-e2d7-4882-879e-70865e9eeef7")
 		)
 		(fp_line
-			(start -1.7 -0.98)
-			(end 1.7 -0.98)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "dac143cc-c122-49dc-a82a-a1e154cdb7b1")
-		)
-		(fp_line
-			(start -1.7 0.98)
-			(end -1.7 -0.98)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "13afeb25-caef-4bcd-afda-3f6c22f1f291")
-		)
-		(fp_line
 			(start 1.7 -0.98)
 			(end 1.7 0.98)
 			(stroke
@@ -11781,6 +11762,16 @@
 			)
 			(layer "F.CrtYd")
 			(uuid "200892de-5943-43e1-8f46-306fb277d082")
+		)
+		(fp_line
+			(start -1.7 -0.98)
+			(end 1.7 -0.98)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "dac143cc-c122-49dc-a82a-a1e154cdb7b1")
 		)
 		(fp_line
 			(start 1.7 0.98)
@@ -11793,24 +11784,14 @@
 			(uuid "45b3aae2-66a2-4826-be3e-d56a4142e263")
 		)
 		(fp_line
-			(start -1 -0.625)
-			(end 1 -0.625)
+			(start -1.7 0.98)
+			(end -1.7 -0.98)
 			(stroke
-				(width 0.1)
+				(width 0.05)
 				(type solid)
 			)
-			(layer "F.Fab")
-			(uuid "0e32f44a-1830-4b65-97bd-1ad380cb4926")
-		)
-		(fp_line
-			(start -1 0.625)
-			(end -1 -0.625)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "3adcac9e-4fb8-45d5-bc12-a4dd6b2f0f4b")
+			(layer "F.CrtYd")
+			(uuid "13afeb25-caef-4bcd-afda-3f6c22f1f291")
 		)
 		(fp_line
 			(start 1 -0.625)
@@ -11823,6 +11804,16 @@
 			(uuid "0ea8b4f4-2aa9-4afb-89b6-6e52dfdbb562")
 		)
 		(fp_line
+			(start -1 -0.625)
+			(end 1 -0.625)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "0e32f44a-1830-4b65-97bd-1ad380cb4926")
+		)
+		(fp_line
 			(start 1 0.625)
 			(end -1 0.625)
 			(stroke
@@ -11832,8 +11823,18 @@
 			(layer "F.Fab")
 			(uuid "a00e833d-89ff-434d-8b35-0df06bc83e19")
 		)
+		(fp_line
+			(start -1 0.625)
+			(end -1 -0.625)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "3adcac9e-4fb8-45d5-bc12-a4dd6b2f0f4b")
+		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(uuid "c9a13963-1c1e-4369-9feb-d65427a3806d")
 			(effects
@@ -11844,7 +11845,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.95 0)
+			(at -0.95 0 90)
 			(size 1 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -11853,7 +11854,7 @@
 			(uuid "30a8666c-b24f-4a99-b049-6f66ba579054")
 		)
 		(pad "2" smd roundrect
-			(at 0.95 0)
+			(at 0.95 0 90)
 			(size 1 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
@@ -11877,7 +11878,7 @@
 	(footprint "footprints:QBLP680-RGB1"
 		(layer "F.Cu")
 		(uuid "e6921466-0d3b-4fde-ac43-ee4d91b35bed")
-		(at 117 63)
+		(at 61.5 76.0875)
 		(property "Reference" "D2"
 			(at 0 0 0)
 			(unlocked yes)
@@ -12451,7 +12452,7 @@
 	(footprint "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 		(layer "F.Cu")
 		(uuid "f29565a9-cf72-4f95-89c5-20769c9061fd")
-		(at 182 53 90)
+		(at 185 53 90)
 		(descr "TSSOP, 16 Pin (https://www.jedec.org/document_search?search_api_views_fulltext=MO-153), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "TSSOP SO JEDEC-MO-153-AB TI-PW0016A Microchip-ST Toshiba-TSSOP16-P-0044-0.65A NXP-SOT403-1 Infineon-P-TSSOP-16-800")
 		(property "Reference" "U9"
