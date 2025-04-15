@@ -2965,6 +2965,12 @@
 		(uuid "581cfeaf-733e-4863-b10c-2504ba66dab4")
 	)
 	(junction
+		(at 217.17 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "598009f3-f512-4629-896b-3ecbe9410772")
+	)
+	(junction
 		(at 347.98 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2987,6 +2993,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6c5c5835-e337-4b2b-a8b6-877eaf5f479a")
+	)
+	(junction
+		(at 217.17 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6fea9e51-78dc-496d-94d6-8453f4024949")
 	)
 	(junction
 		(at 140.97 138.43)
@@ -3539,6 +3551,16 @@
 			(type default)
 		)
 		(uuid "18153751-b6ed-4eb2-84bf-529e11546d8e")
+	)
+	(wire
+		(pts
+			(xy 220.98 68.58) (xy 226.06 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "188f24b1-cec1-4205-8358-3114f2b370bf")
 	)
 	(wire
 		(pts
@@ -5102,6 +5124,16 @@
 	)
 	(wire
 		(pts
+			(xy 220.98 63.5) (xy 217.17 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac85b3ab-8de6-4533-8a08-27f9c1f4b202")
+	)
+	(wire
+		(pts
 			(xy 130.81 147.32) (xy 135.89 147.32)
 		)
 		(stroke
@@ -5259,6 +5291,16 @@
 			(type default)
 		)
 		(uuid "b5042dde-a0f9-45b7-aa44-18809dbad4f3")
+	)
+	(wire
+		(pts
+			(xy 220.98 60.96) (xy 220.98 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b645f488-1040-42ce-bc8c-4f367d91fed5")
 	)
 	(wire
 		(pts
@@ -5662,6 +5704,16 @@
 	)
 	(wire
 		(pts
+			(xy 220.98 66.04) (xy 220.98 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbb81a25-1ac2-44f0-b51e-b3ebb24e505a")
+	)
+	(wire
+		(pts
 			(xy 140.97 96.52) (xy 140.97 104.14)
 		)
 		(stroke
@@ -5972,6 +6024,16 @@
 	)
 	(wire
 		(pts
+			(xy 226.06 60.96) (xy 220.98 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f35169d5-8ea7-4eda-8aa7-42a478c0ebb4")
+	)
+	(wire
+		(pts
 			(xy 240.03 124.46) (xy 240.03 121.92)
 		)
 		(stroke
@@ -6089,6 +6151,16 @@
 			(type default)
 		)
 		(uuid "fd4ff266-3cf8-4a22-a470-374d3b4df48f")
+	)
+	(wire
+		(pts
+			(xy 217.17 66.04) (xy 220.98 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe22ab0c-48d2-4794-95a6-dddd712d6798")
 	)
 	(wire
 		(pts
@@ -10819,6 +10891,76 @@
 			(project "sodar"
 				(path "/f620949f-55f1-4ffa-a6f4-2a6276be8919"
 					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 226.06 64.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5a7de52a-cb0a-42ea-8c5d-e6e1168cf38d")
+		(property "Reference" "C25"
+			(at 229.87 63.4999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 229.87 66.0399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 227.0252 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 226.06 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 226.06 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d2e541d1-079e-4078-98d2-f6a1bf6c0c3e")
+		)
+		(pin "1"
+			(uuid "15679891-02d7-4307-8bf8-dfcf58defd3b")
+		)
+		(instances
+			(project ""
+				(path "/f620949f-55f1-4ffa-a6f4-2a6276be8919"
+					(reference "C25")
 					(unit 1)
 				)
 			)
