@@ -17,3 +17,7 @@ build/
 
 PCB/#auto_saved_files#/
 PCB/*.lck
+
+# Ignore .DS_Store
+.DS_Store
+**/.DS_Store
