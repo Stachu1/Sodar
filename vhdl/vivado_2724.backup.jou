@@ -2,13 +2,14 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Apr 27 22:00:04 2025
-# Process ID: 9616
+# Start of session at: Sun Apr 27 20:26:20 2025
+# Process ID: 2724
 # Current directory: C:/Users/plywa/OneDrive/Pulpit/semseter4/Semester project/Git/Sodar/vhdl
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent42772 C:\Users\plywa\OneDrive\Pulpit\semseter4\Semester project\Git\Sodar\vhdl\sodar_19_cp.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent39188 C:\Users\plywa\OneDrive\Pulpit\semseter4\Semester project\Git\Sodar\vhdl\sodar_19_cp.xpr
 # Log file: C:/Users/plywa/OneDrive/Pulpit/semseter4/Semester project/Git/Sodar/vhdl/vivado.log
 # Journal file: C:/Users/plywa/OneDrive/Pulpit/semseter4/Semester project/Git/Sodar/vhdl\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/plywa/OneDrive/Pulpit/semseter4/Semester project/Git/Sodar/vhdl/sodar_19_cp.xpr}
+launch_sdk -workspace {C:/Users/plywa/OneDrive/Pulpit/semseter4/Semester project/Git/Sodar/vhdl/sodar_19_cp.sdk} -hwspec {C:/Users/plywa/OneDrive/Pulpit/semseter4/Semester project/Git/Sodar/vhdl/sodar_19_cp.sdk/sodar_19_cp_wrapper.hdf}
 update_compile_order -fileset sources_1
