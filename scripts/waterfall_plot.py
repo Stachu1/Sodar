@@ -5,7 +5,7 @@ import numpy as np
 import time
 
 # Serial port configuration
-serial_port = "COM5"  # Updated to the specified serial port
+serial_port = "COM10"  # Updated to the specified serial port
 baud_rate = 115200
 
 # Initialize serial connection
