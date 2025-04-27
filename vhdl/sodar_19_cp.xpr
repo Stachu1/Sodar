@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="40" Path="C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.xpr">
+<Project Version="7" Minor="40" Path="C:/Users/plywa/OneDrive/Pulpit/semseter4/Semester project/Git/Sodar/vhdl/sodar_19_cp.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="e156150c6e734d2eadeb7532e153b044"/>
@@ -22,13 +22,13 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/myip_sodarcp_1.0"/>
-    <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../../../Digital designe vivado/ip_repo/myip_sodarcp_1.0"/>
+    <Option Name="IPOutputRepo" Val="C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.cache/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
-    <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
+    <Option Name="IPUserFilesDir" Val="$PPRDIR/../../../../../../../Digital designe vivado/sodar_19_cp/sodar_19_cp.ip_user_files"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
@@ -80,23 +80,23 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="sodar_19_cp.bd" FileRelPathName="ip/sodar_19_cp_myip_sodarcp_0_0/sodar_19_cp_myip_sodarcp_0_0.xci">
-          <Proxy FileSetName="sodar_19_cp_myip_sodarcp_0_0"/>
+        <CompFileExtendedInfo CompFileName="sodar_19_cp.bd" FileRelPathName="ip/sodar_19_cp_rst_ps7_0_100M_0/sodar_19_cp_rst_ps7_0_100M_0.xci">
+          <Proxy FileSetName="sodar_19_cp_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="sodar_19_cp.bd" FileRelPathName="ip/sodar_19_cp_xbar_0/sodar_19_cp_xbar_0.xci">
           <Proxy FileSetName="sodar_19_cp_xbar_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="sodar_19_cp.bd" FileRelPathName="ip/sodar_19_cp_pwm_top_0_0/sodar_19_cp_pwm_top_0_0.xci">
-          <Proxy FileSetName="sodar_19_cp_pwm_top_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="sodar_19_cp.bd" FileRelPathName="ip/sodar_19_cp_processing_system7_0_0/sodar_19_cp_processing_system7_0_0.xci">
           <Proxy FileSetName="sodar_19_cp_processing_system7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="sodar_19_cp.bd" FileRelPathName="ip/sodar_19_cp_rst_ps7_0_100M_0/sodar_19_cp_rst_ps7_0_100M_0.xci">
-          <Proxy FileSetName="sodar_19_cp_rst_ps7_0_100M_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="sodar_19_cp.bd" FileRelPathName="ip/sodar_19_cp_xadc_wiz_0_0/sodar_19_cp_xadc_wiz_0_0.xci">
           <Proxy FileSetName="sodar_19_cp_xadc_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="sodar_19_cp.bd" FileRelPathName="ip/sodar_19_cp_myip_sodarcp_0_0/sodar_19_cp_myip_sodarcp_0_0.xci">
+          <Proxy FileSetName="sodar_19_cp_myip_sodarcp_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="sodar_19_cp.bd" FileRelPathName="ip/sodar_19_cp_pwm_top_0_0/sodar_19_cp_pwm_top_0_0.xci">
+          <Proxy FileSetName="sodar_19_cp_pwm_top_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/sodar_19_cp/hdl/sodar_19_cp_wrapper.vhd">
@@ -112,7 +112,7 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PPRDIR/../../OneDrive/Pulpit/semseter4/Semester project/constrains/Zedboard-Mastergsodarninecp.xdc">
+      <File Path="$PPRDIR/../../../constrains/Zedboard-Mastergsodarninecp.xdc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
