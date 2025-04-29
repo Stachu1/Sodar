@@ -18,14 +18,21 @@
 #define SYSTEM_CLOCK         100000000UL   // 100 MHz
 #define PWM_FREQUENCY        40000UL       // kHz
 #define DUTY_CYCLE_PERCENT   50            // %
-#define PHASE_SHIFT_DEGREES  72            // ° phase shift
+#define PHASE_SHIFT_DEGREES  0            // Â° phase shift
 #define TAPS 30
 
-#define SAMPLES 5000
+
+#define SAMPLES 5000					// around 2m range
+#define SAMPLE_DIVIDER 50				// Send every 50th sample
+#define BURST_LEN 8					// 40Khz square-wave cycles
+#define PULSES 5						// Send 5 pulses and average the results (noise rejection)
+#define CLK_CYLE_PERIOD 2500			// How many cycles will the 100MHz clk go through in one pwm cycle
+
+#define EVER (;;)
 
 
 u16 buff[SAMPLES];
-u16 out_buff[SAMPLES];
+u32 out_buff[SAMPLES];
 
 const float fir_coeffs[TAPS] = {
     0.0044617840, 0.0051700875, 0.0071170537, 0.0102782692, 0.0145587964,
@@ -34,6 +41,40 @@ const float fir_coeffs[TAPS] = {
     0.0649286479, 0.0634458335, 0.0605571659, 0.0564120830, 0.0512238106,
     0.0452570056, 0.0388124958, 0.0322100566, 0.0257702789, 0.0197966313,
     0.0145587964, 0.0102782692, 0.0071170537, 0.0051700875, 0.0044617840
+};
+
+float sin_0_30[31] = {
+    0.0000f,
+    0.0175f,
+    0.0349f,
+    0.0523f,
+    0.0698f,
+    0.0872f,
+    0.1045f,
+    0.1219f,
+    0.1392f,
+    0.1564f,
+    0.1736f,
+    0.1908f,
+    0.2079f,
+    0.2249f,
+    0.2419f,
+    0.2588f,
+    0.2756f,
+    0.2924f,
+    0.3090f,
+    0.3256f,
+    0.3420f,
+    0.3584f,
+    0.3746f,
+    0.3907f,
+    0.4067f,
+    0.4226f,
+    0.4384f,
+    0.4540f,
+    0.4695f,
+    0.4848f,
+    0.5000f
 };
 
 
@@ -53,7 +94,15 @@ int32_t calculate_phase(uint32_t period, int32_t phase_degrees) {
     return ((int32_t)period * phase_degrees + 180) / 360;
 }
 
-void apply_fir_filter(u16 *input, u16 *output) {
+int32_t beam_ang_to_phase(int8_t beam_angle)
+{
+	float phase_shift = 209.9 * sin_0_30[abs(beam_angle)];
+	if (beam_angle > 0) phase_shift *= -1;
+	return (int32_t)((CLK_CYLE_PERIOD * phase_shift + 180) / 360);
+}
+
+
+void apply_fir_filter(u16 *input, u32 *output) {
     for (int i = 0; i < SAMPLES; i++) {
         float acc = 0.0f;
         for (int j = 0; j < TAPS; j++) {
@@ -61,7 +110,7 @@ void apply_fir_filter(u16 *input, u16 *output) {
                 acc += fir_coeffs[j] * (float)input[i - j];
             }
         }
-        output[i] = (u16)acc;
+        output[i] += (u16)acc;
     }
 }
 
@@ -88,9 +137,9 @@ void initialize_gpio(XGpioPs *GpioInstance) {
 int main(void) {
     uint32_t period_val, duty_val, phase_val;
 
-    	XGpioPs GpioInstance;
+    XGpioPs GpioInstance;
 
-   	    initialize_gpio(&GpioInstance);
+    initialize_gpio(&GpioInstance);
 
 
     ConfigPtr = XAdcPs_LookupConfig(XADC_DEVICE_ID);
@@ -112,70 +161,62 @@ int main(void) {
 
 
 
-//	int32_t current_phase = -108;
+	int8_t beam_angle = 0;
 
-    while(1) {
+    for EVER {
+		int32_t current_phase_val = beam_ang_to_phase(beam_angle);
+		Xil_Out32(PWM_BASE_ADDR + PHASE_OFFSET, current_phase_val);
 
+		// Clear output buffer
+		for (int i = 0; i < SAMPLES; i++) out_buff[i] = 0;
 
-//    		int32_t current_phase_val = calculate_phase(period_val, current_phase);
-//    		Xil_Out32(PWM_BASE_ADDR + PHASE_OFFSET, current_phase_val);
-//    		u16 actual_phase_shift = (((current_phase/18)*5)+30);
+		// Send & sample PULSES
+		for (u8 pulse = 0; pulse < PULSES; pulse++) {
+			XGpioPs_WritePin(&GpioInstance, JE1_PIN, 1);
+			usleep(25*BURST_LEN);
+			XGpioPs_WritePin(&GpioInstance, JE1_PIN, 0);
 
-    	XGpioPs_WritePin(&GpioInstance, JE1_PIN, 1);
-    	 usleep(375);
-        XGpioPs_WritePin(&GpioInstance, JE1_PIN, 0);
+			for (int i = 0; i < SAMPLES; i++)
+			{
+				buff[i] = XAdcPs_GetAdcData(XAdcInstPtr, XADCPS_CH_VPVN);
+			}
 
-        for (int i = 0; i < SAMPLES; i++)
-        	{
-        		buff[i] = XAdcPs_GetAdcData(XAdcInstPtr, XADCPS_CH_VPVN);
-        	}
+			u64 avg = 0;
+			for (int i = 0; i < SAMPLES; i++) avg += buff[i];
+			avg /= SAMPLES;
 
-        	u64 avg = 0;
-        	for (int i = 0; i < SAMPLES; i++) avg += buff[i];
-        	avg /= SAMPLES;
+			// Center the data
+			for (int i = 0; i < SAMPLES; i++)
+			{
+				if (buff[i] >= avg)
+				{
+					buff[i] -= avg;
+				}
+				else
+				{
+					buff[i] = avg - buff[i];
+				}
+			}
 
-        	for (int i = 0; i < SAMPLES; i++)
-        	{
-        		if (buff[i] >= avg)
-        		{
-        			buff[i] -= avg;
-        		}
-        		else
-        		{
-        			buff[i] = avg - buff[i];
-        		}
-        	}
-
-        	// Filter the data
-        	apply_fir_filter(buff, out_buff);
-
-
-        	//Send the data with phase
-//        	for (int j = 0; j < SAMPLES/10; j++)
-//        	{
-//        	   	printf("%04X%03X", out_buff[10*j],actual_phase_shift);
-//        	}
-//        	printf("\n");
+			// Filter the data
+			apply_fir_filter(buff, out_buff);
+		}
 
 
+		// Send the data
+		printf("%02X", (u8)(beam_angle+30));
+		for (int j = 0; j < SAMPLES/SAMPLE_DIVIDER; j++)
+		{
+			printf("%04X", (u16)(out_buff[SAMPLE_DIVIDER*j]/PULSES));
+		}
+		printf("\n");
 
 
-        	// Send the data
-        	for (int j = 0; j < SAMPLES/10; j++)
-        	{
-        		printf("%04X", out_buff[10*j]);
-        	}
-        	printf("\n");
-
-
-//    		if(current_phase >=105)
-//    		{
-//    			current_phase = -108;
-//    		}
-//    		else
-//     		{
-//     			current_phase = current_phase + 18;
-//     		}
+		beam_angle++;
+		if(beam_angle == 31)
+		{
+			beam_angle = -30;
+		}
     }
     return 0;
 }
