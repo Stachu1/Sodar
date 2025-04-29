@@ -1,0 +1,368 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Apr 24 09:47:41 2025
+# Process ID: 10376
+# Current directory: C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.runs/sodar_19_cp_pwm_top_0_0_synth_1
+# Command line: vivado.exe -log sodar_19_cp_pwm_top_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sodar_19_cp_pwm_top_0_0.tcl
+# Log file: C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.runs/sodar_19_cp_pwm_top_0_0_synth_1/sodar_19_cp_pwm_top_0_0.vds
+# Journal file: C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.runs/sodar_19_cp_pwm_top_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source sodar_19_cp_pwm_top_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/plywa/Digital designe vivado/ip_repo/myip_sodarcp_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+Command: synth_design -top sodar_19_cp_pwm_top_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'sodar_19_cp_pwm_top_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 32052 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 713.000 ; gain = 178.277
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'sodar_19_cp_pwm_top_0_0' [c:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/bd/sodar_19_cp/ip/sodar_19_cp_pwm_top_0_0/synth/sodar_19_cp_pwm_top_0_0.vhd:66]
+INFO: [Synth 8-3491] module 'pwm_top' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:5' bound to instance 'U0' of component 'pwm_top' [c:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/bd/sodar_19_cp/ip/sodar_19_cp_pwm_top_0_0/synth/sodar_19_cp_pwm_top_0_0.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'pwm_top' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:15]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-638] synthesizing module 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'pwm_generator' (1#1) [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:15]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-3491] module 'pwm_generator' declared at 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:5' bound to instance 'pwm_inst' of component 'pwm_generator' [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'pwm_top' (2#1) [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_top.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'sodar_19_cp_pwm_top_0_0' (3#1) [c:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/bd/sodar_19_cp/ip/sodar_19_cp_pwm_top_0_0/synth/sodar_19_cp_pwm_top_0_0.vhd:66]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 779.367 ; gain = 244.645
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 779.367 ; gain = 244.645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 779.367 ; gain = 244.645
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 905.035 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.417 . Memory (MB): peak = 917.902 ; gain = 12.867
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 917.902 ; gain = 383.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 917.902 ; gain = 383.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 917.902 ; gain = 383.180
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:62]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:62]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:62]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:62]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:62]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:62]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.srcs/sources_1/new/pwm_generator.vhd:45]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 917.902 ; gain = 383.180
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------+------------+----------+
+|      |RTL Partition |Replication |Instances |
++------+--------------+------------+----------+
+|1     |pwm_generator |          19|      7841|
+|2     |pwm_top__GC0  |           1|      2873|
++------+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 152   
+	   3 Input     32 Bit       Adders := 19    
++---Multipliers : 
+	                 3x32  Multipliers := 20    
+	                 4x32  Multipliers := 60    
+	                 5x32  Multipliers := 7     
+	                 6x32  Multipliers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 171   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module pwm_generator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 8     
+	   3 Input     32 Bit       Adders := 1     
++---Multipliers : 
+	                 3x32  Multipliers := 1     
+	                 4x32  Multipliers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+Module pwm_top 
+Detailed RTL Component Info : 
++---Multipliers : 
+	                 3x32  Multipliers := 1     
+	                 4x32  Multipliers := 3     
+	                 5x32  Multipliers := 7     
+	                 6x32  Multipliers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 917.902 ; gain = 383.180
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |pwm_generator    |           1|      3434|
+|2     |pwm_top__GC0     |           1|       650|
+|3     |pwm_generator__1 |           9|      3484|
+|4     |pwm_generator__2 |           5|      3482|
+|5     |pwm_generator__3 |           2|      3481|
+|6     |pwm_generator__4 |           1|      3480|
+|7     |pwm_generator__5 |           1|      3478|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:35 . Memory (MB): peak = 917.902 ; gain = 383.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 917.902 ; gain = 383.180
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |pwm_generator    |           1|      3434|
+|2     |pwm_top__GC0     |           1|       650|
+|3     |pwm_generator__1 |           9|      3484|
+|4     |pwm_generator__2 |           5|      3482|
+|5     |pwm_generator__3 |           2|      3481|
+|6     |pwm_generator__4 |           1|      3480|
+|7     |pwm_generator__5 |           1|      3478|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 938.375 ; gain = 403.652
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 960.570 ; gain = 425.848
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 960.570 ; gain = 425.848
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 960.570 ; gain = 425.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 960.570 ; gain = 425.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 960.570 ; gain = 425.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 960.570 ; gain = 425.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |  4319|
+|2     |LUT1   |  4185|
+|3     |LUT2   |  6385|
+|4     |LUT3   |  2038|
+|5     |LUT4   | 10360|
+|6     |LUT5   |   439|
+|7     |LUT6   |  2808|
+|8     |FDRE   |   608|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------------------+-----------------+------+
+|      |Instance                   |Module           |Cells |
++------+---------------------------+-----------------+------+
+|1     |top                        |                 | 31142|
+|2     |  U0                       |pwm_top          | 31142|
+|3     |    \gen_pwm[0].pwm_inst   |pwm_generator    |  1306|
+|4     |    \gen_pwm[10].pwm_inst  |pwm_generator_0  |  1555|
+|5     |    \gen_pwm[11].pwm_inst  |pwm_generator_1  |  1587|
+|6     |    \gen_pwm[12].pwm_inst  |pwm_generator_2  |  1555|
+|7     |    \gen_pwm[13].pwm_inst  |pwm_generator_3  |  1586|
+|8     |    \gen_pwm[14].pwm_inst  |pwm_generator_4  |  1592|
+|9     |    \gen_pwm[15].pwm_inst  |pwm_generator_5  |  1587|
+|10    |    \gen_pwm[16].pwm_inst  |pwm_generator_6  |  1514|
+|11    |    \gen_pwm[17].pwm_inst  |pwm_generator_7  |  1605|
+|12    |    \gen_pwm[18].pwm_inst  |pwm_generator_8  |  3424|
+|13    |    \gen_pwm[1].pwm_inst   |pwm_generator_9  |  1511|
+|14    |    \gen_pwm[2].pwm_inst   |pwm_generator_10 |  1517|
+|15    |    \gen_pwm[3].pwm_inst   |pwm_generator_11 |  1551|
+|16    |    \gen_pwm[4].pwm_inst   |pwm_generator_12 |  1527|
+|17    |    \gen_pwm[5].pwm_inst   |pwm_generator_13 |  1549|
+|18    |    \gen_pwm[6].pwm_inst   |pwm_generator_14 |  1555|
+|19    |    \gen_pwm[7].pwm_inst   |pwm_generator_15 |  1550|
+|20    |    \gen_pwm[8].pwm_inst   |pwm_generator_16 |  1523|
+|21    |    \gen_pwm[9].pwm_inst   |pwm_generator_17 |  1548|
++------+---------------------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 960.570 ; gain = 425.848
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 960.570 ; gain = 287.312
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:42 . Memory (MB): peak = 960.570 ; gain = 425.848
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 4319 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1006.133 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+47 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1006.133 ; gain = 713.176
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1006.133 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.runs/sodar_19_cp_pwm_top_0_0_synth_1/sodar_19_cp_pwm_top_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1174] Renamed 20 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1006.133 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.runs/sodar_19_cp_pwm_top_0_0_synth_1/sodar_19_cp_pwm_top_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file sodar_19_cp_pwm_top_0_0_utilization_synth.rpt -pb sodar_19_cp_pwm_top_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 24 09:48:52 2025...

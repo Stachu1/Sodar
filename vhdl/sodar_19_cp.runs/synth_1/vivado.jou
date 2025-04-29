@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Apr 27 14:43:24 2025
+# Process ID: 39480
+# Current directory: C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.runs/synth_1
+# Command line: vivado.exe -log sodar_19_cp_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sodar_19_cp_wrapper.tcl
+# Log file: C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.runs/synth_1/sodar_19_cp_wrapper.vds
+# Journal file: C:/Users/plywa/Digital designe vivado/sodar_19_cp/sodar_19_cp.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source sodar_19_cp_wrapper.tcl -notrace
