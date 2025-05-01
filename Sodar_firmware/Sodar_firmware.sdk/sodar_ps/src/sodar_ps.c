@@ -21,7 +21,7 @@
 #define FIR_TAPS            30              // FIR low-pass taps
 #define SAMPLES             5000			// Echo ADC samples (5000 ~ 2m)
 #define SAMPLE_DIVIDER      50				// Send every 50th sample
-#define BURST_LEN           8				// 40Khz square-wave cycles
+#define BURST_LEN           10				// 40Khz square-wave cycles
 #define PULSES              3				// Send n pulses and average the results (noise rejection)
 #define BAUD_RATE           230400          // Serial transmit speed
 
@@ -31,9 +31,15 @@
 #define EN_PIN 13
 #define LED_PIN 10
 
+XGpioPs GpioInstance;
 
-u16 buff[SAMPLES];
+static XAdcPs XAdcInst;
+XAdcPs* XAdcInstPtr = &XAdcInst;
+
+u32 adc_buff[SAMPLES];
 u32 out_buff[SAMPLES];
+
+enum Mode {SRC, TRK} mode = TRK;
 
 
 const float fir_coeffs[FIR_TAPS] = {
@@ -70,7 +76,7 @@ void set_beam_angle(int8_t beam_angle)
 }
 
 
-void apply_fir_filter(u16 *input, u32 *output) {
+void apply_fir_filter(u32 *input, u32 *output) {
     for (int i = 0; i < SAMPLES; i++) {
         float acc = 0.0f;
         for (int j = 0; j < FIR_TAPS; j++) {
@@ -78,9 +84,10 @@ void apply_fir_filter(u16 *input, u32 *output) {
                 acc += fir_coeffs[j] * (float)input[i - j];
             }
         }
-        output[i] += (u16)acc;
+        output[i] += acc;
     }
 }
+
 
 void initialize_gpio(XGpioPs *GpioInstance) {
     XGpioPs_Config *ConfigPtr;
@@ -89,12 +96,10 @@ void initialize_gpio(XGpioPs *GpioInstance) {
     XGpioPs_CfgInitialize(GpioInstance, ConfigPtr, ConfigPtr->BaseAddr);
 
     // Set direction and enable output for JE1 and JE2
-    XGpioPs_SetDirectionPin(GpioInstance, EN_PIN, 1);  // Output
+    XGpioPs_SetDirectionPin(GpioInstance, EN_PIN, 1);
     XGpioPs_SetOutputEnablePin(GpioInstance, EN_PIN, 1);
-
-    // Set direction and enable output for JE1 and JE2
-        XGpioPs_SetDirectionPin(GpioInstance, LED_PIN, 1);  // Output
-        XGpioPs_SetOutputEnablePin(GpioInstance, LED_PIN, 1);
+    XGpioPs_SetDirectionPin(GpioInstance, LED_PIN, 1);
+    XGpioPs_SetOutputEnablePin(GpioInstance, LED_PIN, 1);
 }
 
 
@@ -108,19 +113,81 @@ void set_uart_speed(void)
 }
 
 
+void transmit_and_sample(int8_t pulses, int8_t burst_len)
+{
+    // Clear buffers
+    for (int i = 0; i < SAMPLES; i++) adc_buff[i] = 0;
+    for (int i = 0; i < SAMPLES; i++) out_buff[i] = 0;
+
+    // Send & sample pulses
+    for (u8 pulse = 0; pulse < pulses; pulse++) {
+        XGpioPs_WritePin(&GpioInstance, EN_PIN, 1);
+        usleep(25*burst_len);
+        XGpioPs_WritePin(&GpioInstance, EN_PIN, 0);
+
+        for (int i = 0; i < SAMPLES; i++)
+        {
+            adc_buff[i] += XAdcPs_GetAdcData(XAdcInstPtr, XADCPS_CH_VPVN);
+        }
+    }
+
+    // Calculate average
+    u64 avg = 0;
+    for (int i = 0; i < SAMPLES; i++) avg += adc_buff[i];
+    avg /= SAMPLES;
+
+    // Remove offset & take abs of adc_buff data
+    for (int i = 0; i < SAMPLES; i++)
+    {
+        if (adc_buff[i] >= avg)
+        {
+            adc_buff[i] -= avg;
+        }
+        else
+        {
+            adc_buff[i] = avg - adc_buff[i];
+        }
+    }
+}
+
+
+u32 echo_max_index(u32 *buff, u32 offset){
+    u32 val = 0;
+    u32 index = 0;
+    for (int i = offset; i < SAMPLES; i++)
+    {
+        if (buff[i] > val)
+        {
+            val = buff[i];
+            index = i;
+        }
+    }
+    return index;
+}
+
+u32 max(u32 val1, u32 val2)
+{
+	if (val1 >= val2)
+	{
+		return val1;
+	}
+	else
+	{
+		return val2;
+	}
+}
+
+
 int main(void) {
     // Set uart speed
     set_uart_speed();
 
 
     // Init GPIO
-    XGpioPs GpioInstance;
     initialize_gpio(&GpioInstance);
 
     // Init ADC
     XAdcPs_Config *ConfigPtr;
-    static XAdcPs XAdcInst;
-    XAdcPs* XAdcInstPtr = &XAdcInst;
     ConfigPtr = XAdcPs_LookupConfig(XADC_DEVICE_ID);
     XAdcPs_CfgInitialize(XAdcInstPtr, ConfigPtr, ConfigPtr->BaseAddress);
     XAdcPs_SetSequencerMode(XAdcInstPtr, XADCPS_SEQ_MODE_SINGCHAN);
@@ -130,63 +197,74 @@ int main(void) {
     Xil_Out32(PWM_BASE_ADDR + PERIOD_OFFSET, SYSTEM_CLOCK / PWM_FREQUENCY);
     Xil_Out32(PWM_BASE_ADDR + ON_CYCLES_OFFSET, SYSTEM_CLOCK / PWM_FREQUENCY / 2);
 
-
 	int8_t beam_angle = 0;
-    for EVER {
-	    set_beam_angle(beam_angle);
-		
-		// Clear output buffer
-		for (int i = 0; i < SAMPLES; i++) out_buff[i] = 0;
+    for EVER {        
+        if (mode == SRC)
+        {
+            set_beam_angle(beam_angle);    
+            transmit_and_sample(PULSES, BURST_LEN);
+			apply_fir_filter(adc_buff, out_buff);
+    
+            // Send the data
+            printf("%02X", 0x7F & (u8)(beam_angle+30));
+            for (int i = 0; i < SAMPLES / SAMPLE_DIVIDER; i++)
+            {
+                printf("%04X", (u16)(out_buff[SAMPLE_DIVIDER * i] / PULSES));
+            }
+            printf("\n");
 
-		// Send & sample PULSES
-		for (u8 pulse = 0; pulse < PULSES; pulse++) {
-			XGpioPs_WritePin(&GpioInstance, EN_PIN, 1);
-			usleep(25*BURST_LEN);
-			XGpioPs_WritePin(&GpioInstance, EN_PIN, 0);
+            if (out_buff[echo_max_index(out_buff, 1e3)] / 65.535 > 60) mode = TRK;
+    
+            // Shift beam angle
+            XGpioPs_WritePin(&GpioInstance, LED_PIN, 0);
+            beam_angle++;
+            if(beam_angle == 31)
+            {
+                beam_angle = -30;
+                XGpioPs_WritePin(&GpioInstance, LED_PIN, 1);
+            }
+        }
+        if (mode == TRK)
+        {
+            u32 index = 0;
+            u32 index_left = 0;
+            u32 index_right = 0;
 
-			for (int i = 0; i < SAMPLES; i++)
-			{
-				buff[i] = XAdcPs_GetAdcData(XAdcInstPtr, XADCPS_CH_VPVN);
-			}
+            set_beam_angle(beam_angle - 1);
+            transmit_and_sample(PULSES*3, BURST_LEN*2);
+			apply_fir_filter(adc_buff, out_buff);
+            index_left = echo_max_index(out_buff, 1e3);
+            u32 echo_left = out_buff[index_left];
 
-			u64 avg = 0;
-			for (int i = 0; i < SAMPLES; i++) avg += buff[i];
-			avg /= SAMPLES;
+            set_beam_angle(beam_angle + 1);
+            transmit_and_sample(PULSES*3, BURST_LEN*2);
+			apply_fir_filter(adc_buff, out_buff);
+            index_right = echo_max_index(out_buff, 1e3);
+            u32 echo_right = out_buff[index_right];
+            
+            if (echo_left * 0.9 > echo_right)
+            {
+                beam_angle -= 1;
+                index = index_left;
+            }
+            
+            if (echo_right * 0.9 > echo_left)
+            {
+                beam_angle += 1;
+                index = index_right;
+            }
 
-			// Center the data
-			for (int i = 0; i < SAMPLES; i++)
-			{
-				if (buff[i] >= avg)
-				{
-					buff[i] -= avg;
-				}
-				else
-				{
-					buff[i] = avg - buff[i];
-				}
-			}
+            // Send the data
+            if (index != 0)
+            {
+                printf("%02X", 0x80 | (u8)(beam_angle+30));
+                printf("%04X", (u16)index / SAMPLE_DIVIDER);
+                printf("\n");
+                
+            }
 
-			// Filter the data
-			apply_fir_filter(buff, out_buff);
-		}
-
-
-		// Send the data
-		printf("%02X", (u8)(beam_angle+30));
-		for (int j = 0; j < SAMPLES/SAMPLE_DIVIDER; j++)
-		{
-			printf("%04X", (u16)(out_buff[SAMPLE_DIVIDER*j]/PULSES));
-		}
-		printf("\n");
-
-
-		XGpioPs_WritePin(&GpioInstance, LED_PIN, 0);
-		beam_angle++;
-		if(beam_angle == 31)
-		{
-			beam_angle = -30;
-			XGpioPs_WritePin(&GpioInstance, LED_PIN, 1);
-		}
+            if (max(echo_left, echo_right) / 65.535 < 15) mode = SRC;
+        }
     }
     return 0;
 }
