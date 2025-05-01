@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Thu May  1 10:50:54 2025
+// Date        : Thu May  1 11:19:23 2025
 // Host        : SBA-UDV running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Output/Sodar/Sodar_firmware/Sodar_firmware.srcs/sources_1/bd/Sodar/ip/Sodar_xadc_wiz_0_0/Sodar_xadc_wiz_0_0_sim_netlist.v
+//               C:/Output/Sodar/Sodar_firmware/Sodar_firmware.srcs/sources_1/bd/Sodar/ip/Sodar_xadc_wiz_0_0/Sodar_xadc_wiz_0_0_sim_netlist.v
 // Design      : Sodar_xadc_wiz_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

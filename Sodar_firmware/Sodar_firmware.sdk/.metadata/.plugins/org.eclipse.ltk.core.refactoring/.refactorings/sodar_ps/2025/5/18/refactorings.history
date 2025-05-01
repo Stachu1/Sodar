@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;sodar_ps/src/helloworld.c&apos; to &apos;sodar_ps.c&apos;" description="Rename resource &apos;helloworld.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/helloworld.c" name="sodar_ps.c" stamp="1746091453595" updateReferences="true"/>
+</session>

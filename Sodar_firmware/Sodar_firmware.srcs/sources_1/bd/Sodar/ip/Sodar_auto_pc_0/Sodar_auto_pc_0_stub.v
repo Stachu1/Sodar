@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Thu May  1 10:51:08 2025
+// Date        : Thu May  1 11:19:35 2025
 // Host        : SBA-UDV running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/Output/Sodar/Sodar_firmware/Sodar_firmware.srcs/sources_1/bd/Sodar/ip/Sodar_auto_pc_0/Sodar_auto_pc_0_stub.v
+//               C:/Output/Sodar/Sodar_firmware/Sodar_firmware.srcs/sources_1/bd/Sodar/ip/Sodar_auto_pc_0/Sodar_auto_pc_0_stub.v
 // Design      : Sodar_auto_pc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1
