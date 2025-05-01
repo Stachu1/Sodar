@@ -21,3 +21,49 @@ PCB/*.lck
 # Ignore .DS_Store
 .DS_Store
 **/.DS_Store
+
+
+# Vivado generated folders
+*.Xil/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.runs/
+*.gen/
+*.backup/
+*.webtalk/
+*.log
+*.jou
+*.str
+*.tmp
+*.wdb
+*.wcfg
+*.dcp
+*.tcl
+*.pb
+*.prj
+*.xml
+
+# ip_repo generated content (but keep your custom IP HDL and sources!)
+ip_repo/*/edit_*/
+ip_repo/*/*.cache/
+ip_repo/*/*.hw/
+ip_repo/*/*.ip_user_files/
+ip_repo/*/*.sim/
+
+# General ignores
+*.o
+*.obj
+*.elf
+*.bin
+*.bit
+*.mcs
+
+# Optional: ignore Vivado-specific lock files
+*.lock
+
+# Ignore temporary folders
+__pycache__/
+tmp/
+temp/
