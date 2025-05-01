@@ -5,8 +5,8 @@ from matplotlib.animation import FuncAnimation
 
 # === CONFIG ===
 SERIAL_PORT = "COM5"
-BAUD_RATE = 115200
-INTENSITY_LENGTH = 500
+BAUD_RATE = 230400
+INTENSITY_LENGTH = 100
 ANGLE_MIN = -30
 ANGLE_MAX = 30
 
@@ -27,7 +27,7 @@ im = ax.imshow(
     extent=[ANGLE_MIN - 0.5, ANGLE_MAX + 0.5, 0, INTENSITY_LENGTH],
     cmap='viridis', # Color map
     vmin=0,         # Min voltage
-    vmax=40         # Max voltage
+    vmax=30         # Max voltage
 )
 ax.set_xlabel("Angle (°)")
 ax.set_ylabel("Sample Index")
@@ -57,6 +57,6 @@ def update(frame):
         print(f"Error: {e}")
 
 # === ANIMATION LOOP ===
-ani = FuncAnimation(fig, update, interval=50)
+ani = FuncAnimation(fig, update, interval=10, cache_frame_data=False)
 plt.tight_layout()
 plt.show()
