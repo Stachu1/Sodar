@@ -19,11 +19,12 @@
 #define PWM_FREQUENCY       40000UL       	// tx_freq = 40 kHz
 
 #define FIR_TAPS            30              // FIR low-pass taps
-#define SAMPLES             5000			// Echo ADC samples (5000 ~ 2m)
+#define SAMPLES             3000			// Echo ADC samples (5000 ~ 2m)
 #define SAMPLE_DIVIDER      50				// Send every 50th sample
-#define BURST_LEN           10				// 40Khz square-wave cycles
-#define PULSES              3				// Send n pulses and average the results (noise rejection)
+#define BURST_LEN           7				// 40Khz square-wave cycles
+#define PULSES              1				// Send n pulses and average the results (noise rejection)
 #define BAUD_RATE           230400          // Serial transmit speed
+#define FOV					40				// FOV in deg
 
 
 #define EVER (;;)
@@ -39,7 +40,7 @@ XAdcPs* XAdcInstPtr = &XAdcInst;
 u32 adc_buff[SAMPLES];
 u32 out_buff[SAMPLES];
 
-enum Mode {SRC, TRK} mode = TRK;
+enum Mode {SRC, TRK} mode = SRC;
 
 
 const float fir_coeffs[FIR_TAPS] = {
@@ -206,21 +207,21 @@ int main(void) {
 			apply_fir_filter(adc_buff, out_buff);
     
             // Send the data
-            printf("%02X", 0x7F & (u8)(beam_angle+30));
+            printf("%02X", 0x7F & (u8)(beam_angle + FOV / 2));
             for (int i = 0; i < SAMPLES / SAMPLE_DIVIDER; i++)
             {
                 printf("%04X", (u16)(out_buff[SAMPLE_DIVIDER * i] / PULSES));
             }
             printf("\n");
 
-            if (out_buff[echo_max_index(out_buff, 1e3)] / 65.535 > 60) mode = TRK;
+//            if (out_buff[echo_max_index(out_buff, 1e3)] / 65.535 > 60) mode = TRK;
     
             // Shift beam angle
             XGpioPs_WritePin(&GpioInstance, LED_PIN, 0);
             beam_angle++;
-            if(beam_angle == 31)
+            if(beam_angle == FOV / 2 + 1)
             {
-                beam_angle = -30;
+                beam_angle = -FOV / 2;
                 XGpioPs_WritePin(&GpioInstance, LED_PIN, 1);
             }
         }
