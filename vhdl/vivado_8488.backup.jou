@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Apr 27 21:58:23 2025
+# Process ID: 8488
+# Current directory: C:/Users/plywa/OneDrive/Pulpit/semseter4/Semester project/Git/Sodar/vhdl
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent39220 C:\Users\plywa\OneDrive\Pulpit\semseter4\Semester project\Git\Sodar\vhdl\sodar_19_cp.xpr
+# Log file: C:/Users/plywa/OneDrive/Pulpit/semseter4/Semester project/Git/Sodar/vhdl/vivado.log
+# Journal file: C:/Users/plywa/OneDrive/Pulpit/semseter4/Semester project/Git/Sodar/vhdl\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/plywa/OneDrive/Pulpit/semseter4/Semester project/Git/Sodar/vhdl/sodar_19_cp.xpr}
+update_compile_order -fileset sources_1
