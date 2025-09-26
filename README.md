@@ -85,6 +85,13 @@
 
 ---
 
+## 📷 Example Setup
+<img width="450" height="350" alt="image" src="https://github.com/user-attachments/assets/33487c6b-bd8f-47b7-9fee-60a76ac81a98" />
+<img width="1200" height="700" alt="image" src="https://github.com/user-attachments/assets/1d4348c7-6754-4df5-9622-e70634fdc0cc" />
+
+
+---
+
 ## 🛠️ Configuration
 
 Set these parameters in the firmware and script:
