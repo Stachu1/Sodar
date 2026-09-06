@@ -11,7 +11,7 @@ The project was developed as a concept and experimental prototype rather than a 
 The system consists of four main parts:
 
 - **19-element transmitter array** using 40 kHz piezoelectric ultrasonic transducers
-- **Custom PCB** with 19 motor-driver IC based full H-bridges for driving the transducers
+- **Custom PCB** with 19 full H-bridge driver channels based on TC78H621FNG motor-driver ICs for driving the transducers
 - **Digilent Zedboard (Zynq-7000 SoC)**, with VHDL logic in the programmable logic (PL) generating the phase-shifted transmit signals and C firmware running on the processing system (PS) handling acquisition and signal processing
 - **Python host software** for receiving processed data over UART and visualizing the measured echo strength as a function of angle and distance
 
@@ -183,7 +183,7 @@ An experimental tracking mode was also implemented in the PS firmware.
 
 Instead of performing a full angular scan, the system compares the echo strength at neighbouring beam angles and moves the beam towards the stronger response.
 
-The implementation was very simple and was not sufficiently reliable to be considered a finished. It is included primarily as an experiment demonstrating how the beam-steering mechanism could be used for closed-loop object tracking.
+The implementation was experimental and not sufficiently reliable to be considered a finished tracking system. It is included primarily as an experiment demonstrating how the beam-steering mechanism could be used for closed-loop object tracking.
 
 ## Host Software
 
